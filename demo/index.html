@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Page Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div id="wrapper"></div>
+  </div>
+  <script src="../src/spa-ui-pager.js"></script>
+  <script>
+  var pager = new Pager(document.getElementById('wrapper'), {
+    total: 10,
+    page: 4
+  });
+  </script>
+</body>
+</html>

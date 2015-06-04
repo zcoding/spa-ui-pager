@@ -1,0 +1,31 @@
+html, body, div {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+#wrapper a {
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 2px;
+  padding: 0;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  background: #EEE;
+}
+
+#wrapper a.a-page {
+  width: 30px;
+  color: #333;
+}
+
+#wrapper a.prev, #wrapper a.next {
+  width: 80px;
+  color: #000;
+}
