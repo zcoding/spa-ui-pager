@@ -1,6 +1,6 @@
 {
   "name": "spa-ui-pager",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "spa pager ui module",
   "main": "Gruntfile.js",
   "repository": {
