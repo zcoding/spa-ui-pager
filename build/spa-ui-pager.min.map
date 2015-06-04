@@ -1,0 +1,1 @@
+{"version":3,"file":"spa-ui-pager.min.js","sources":["../src/spa-ui-pager.js"],"names":["factory","define","cmd","require","exports","module","window","Pager"],"mappings":";CAAC,SAASA,GACc,kBAAXC,SAAyBA,OAAOC,IACzCD,OAAO,SAASE,QAASC,QAASC,QAChCL,EAAQI,WAGVJ,EAAQM,SAEV,SAASF,SAETA,QAAQG,MAAQ"}
