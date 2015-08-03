@@ -1,4 +1,4 @@
-/* spa-ui-pager by zcoding, MIT license, 2015-06-04 version: 0.2.1 */
+/* spa-ui-pager by zcoding, MIT license, 2015-06-08 version: 0.2.2 */
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     define('spa-ui-pager', ['require', 'exports'], function(require, exports) {
@@ -261,6 +261,9 @@ pprtt.repaint = function(options) {
  */
 pprtt.prev = function(page) {
   page = page || -1;
+  if (typeof page !== 'number') {
+    throw new TypeError('Shit! Page Number Not Found!');
+  }
   var go2 = this.page + page;
   go2 = parseInt(go2);
   if (go2 !== go2 || go2 < 1) {
@@ -284,6 +287,9 @@ pprtt.prev = function(page) {
  */
 pprtt.next = function(page) {
   page = page || 1;
+  if (typeof page !== 'number') {
+    throw new TypeError('shit! Page Number Not Found!');
+  }
   var go2 = this.page + page;
   go2 = parseInt(go2);
   if (go2 !== go2 || go2 > this.total) {
@@ -308,7 +314,6 @@ pprtt.next = function(page) {
 pprtt.go = function(page) {
   if (typeof page !== 'number') {
     throw new TypeError('Shit! Page Number Not Found!');
-    return this;
   }
   page = parseInt(page);
   if (page < 1) {

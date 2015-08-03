@@ -4,6 +4,10 @@ module.exports = function(grunt) {
 
     pkg: grunt.file.readJSON('package.json'),
 
+    jshint: {
+      before: ['src/utils.js', 'src/repaint.js', 'src/pager.js']
+    },
+
     uglify: {
       options: {
         compress: {
@@ -45,7 +49,7 @@ module.exports = function(grunt) {
       },
       "build": {
         files: ['src/*.js'],
-        tasks: ['concat:raw', 'concat:bootstrap', 'uglify:build']
+        tasks: ['jshint:before', 'concat:raw', 'concat:bootstrap', 'uglify:build']
       }
     },
 
@@ -66,8 +70,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-compress');
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
 
-  grunt.registerTask('default', ['concat:raw', 'concat:bootstrap', 'uglify:build', 'watch:build']);
+  grunt.registerTask('default', ['jshint:before', 'concat:raw', 'concat:bootstrap', 'uglify:build', 'watch:build']);
   grunt.registerTask('build', ['concat:raw', 'concat:bootstrap', 'uglify:build']);
   grunt.registerTask('release', ['concat:raw', 'concat:bootstrap', 'uglify:build', 'compress:release']);
 
